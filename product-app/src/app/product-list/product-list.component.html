@@ -40,8 +40,8 @@
               XXX
             </th>
             <th>{{ product.code }}</th>
-            <th>{{ product.name }}</th>
-            <th>{{ product.price }}</th>
+            <th>{{ product.name | uppercase | productName: "-" }}</th>
+            <th>{{ product.price | number: ".2" }}</th>
             <th>{{ product.available }}</th>
             <th>{{ product.rating }}</th>
           </tr>
