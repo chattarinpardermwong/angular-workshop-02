@@ -25,8 +25,14 @@ export class ProductListComponent implements OnInit {
     // this.products.push(p1, p2, p3, p4, p5);
   }
   getAll(): void {
-    this.service.getAllProduct().subscribe((products) => {
-      return (this.products = products);
-    });
+    this.service
+      .getAllProduct()
+      .subscribe((products) => (this.products = products));
+    // return (this.products = products););
+  }
+
+  onRatingClicked(message: string): void {
+    // console.log(message);
+    alert(message);
   }
 }
